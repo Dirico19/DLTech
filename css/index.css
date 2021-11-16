@@ -1,0 +1,75 @@
+/* SECCION BANNER */
+.banner {
+  width: 100%;
+  height: calc(100vh - 80px);
+  position: relative;
+  overflow: hidden;
+  background-color: #daa;
+}
+.banner-bloque {
+  width: 300%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  background-color: #555;
+  z-index: 10;
+}
+.slider {
+  width: calc(100% / 3);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../img/banner.jpg);
+}
+.flechas {
+  position: absolute;
+  top: calc(50% - 30px);
+  height: 60px;
+  cursor: pointer;
+  z-index: 20;
+}
+.flechas i {
+  color: #fff;
+  font-size: 60px;
+  text-shadow: 0 0 10px #000;
+  transition: color 0.3s, transform 0.3s;
+}
+.flechas:hover i {
+  color: #c00;
+  transform: scale(1.2);
+}
+.izq {
+  left: 15px;
+}
+.der {
+  right: 15px;
+}
+.puntos-sliders {
+  position: absolute;
+  width: 80px;
+  height: 10px;
+  bottom: 20px;
+  left: calc(50% - 40px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+}
+.puntos-sliders div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 10px #000;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.puntos-sliders div:hover {
+  background-color: #c00;
+  transform: scale(1.5);
+}
+/* CUERPO DE PAGINA */
+.cuerpo {
+  height: 40vh;
+  background: linear-gradient(30deg, #faa, #eee 20%, #eee 80%, #faa);
+}

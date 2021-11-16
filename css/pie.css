@@ -1,0 +1,247 @@
+/* PIE DE PAGINA */
+footer {
+  background-color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+footer li {
+  color: #bbb;
+  list-style: none;
+}
+footer a {
+  color: #bbb;
+  text-decoration: none;
+}
+.info-pie {
+  width: 20%;
+  padding: 40px 0 10px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.info-pie h2 {
+  color: #fff;
+  width: 100%;
+  font-size: 20px;
+  padding-bottom: 40px;
+}
+.info-pie li {
+  width: 100%;
+  padding-bottom: 20px;
+  font-size: 16px;
+}
+.info-pie li i {
+  padding-right: 10px;
+}
+.redes > a {
+  margin-right: 25px;
+  font-size: 25px;
+}
+.info-pie a {
+  display: inline-block;
+  transition: color 0.3s, transform 0.3s;
+}
+.info-pie a:hover {
+  color: #c00;
+  transform: scale(1.1);
+}
+.copyright {
+  width: 98%;
+  color: #fff;
+  border-top: 2px solid #555;
+  text-align: center;
+  padding: 20px 0;
+  margin: 10px 1% 0;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 970px) {
+  .logo {
+    width: 50%;
+    height: 100%;
+  }
+  .nav {
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    top: 70px;
+    left: 100vw;
+    z-index: 100;
+    background-color: #222;
+    opacity: 0;
+    transition: left 0.5s ease-out, opacity 1s;
+  }
+  .botones {
+    width: 50%;
+  }
+  .botones i {
+    font-size: 24px;
+  }
+  .btn-menu {
+    display: block;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  .menu li {
+    height: calc(98% / 6);
+  }
+  .menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 22px;
+    margin: 0;
+    transition: color 0.3s, transform 0.3s;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+    height: 100%;
+  }
+  .banner {
+    height: calc(100vh - 70px);
+  }
+  .flechas {
+    top: calc(50% - 20px);
+    height: 40px;
+  }
+  .flechas i {
+    font-size: 40px;
+  }
+  .puntos-sliders {
+    width: 60px;
+    height: 8px;
+    left: calc(50% - 30px);
+  }
+  .puntos-sliders div {
+    width: 8px;
+    height: 8px;
+  }
+  .info-pie {
+    width: 40%;
+    padding: 30px 0 0;
+    justify-content: center;
+  }
+  .info-pie h2 {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .info-pie li {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  .info-pie li i {
+    padding-right: 10px;
+  }
+  .redes > a {
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 750px) and (orientation: landscape) {
+  header {
+    height: 60px;
+  }
+  .nav {
+    height: calc(100vh - 60px);
+    top: 60px;
+  }
+  .menu a {
+    font-size: 18px;
+  }
+  .banner {
+    height: calc(100vh - 60px);
+  }
+}
+@media screen and (max-width: 510px) {
+  header {
+    height: 50px;
+  }
+  .nav {
+    height: calc(100vh - 50px);
+    top: 50px;
+  }
+  .menu a {
+    font-size: 16px;
+  }
+  .botones i {
+    font-size: 18px;
+  }
+  .banner {
+    height: calc(100vh - 50px);
+  }
+  .flechas {
+    top: calc(50% - 12px);
+    height: 24px;
+  }
+  .flechas i {
+    font-size: 24px;
+  }
+  .puntos-sliders {
+    width: 50px;
+    height: 6px;
+    bottom: 10px;
+    left: calc(50% - 25px);
+  }
+  .puntos-sliders div {
+    width: 6px;
+    height: 6px;
+  }
+  .info-pie {
+    width: 100%;
+    padding: 20px 0 0;
+    justify-content: center;
+  }
+  .info-pie h2 {
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .info-pie li {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .info-pie li i {
+    padding-right: 10px;
+  }
+  .redes > a {
+    margin: 0 10px;
+  }
+}
+/* VERTICAL */
+@media screen and (max-width: 1225px) and (orientation: portrait) {
+  .banner {
+    height: calc(50vh - 70px);
+  }
+}
+@media screen and (max-width: 970px) and (orientation: portrait) {
+  .menu li {
+    height: calc(70% / 6);
+  }
+  .menu a {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 510px) and (orientation: portrait) {
+  header {
+    height: 70px;
+  }
+  .nav {
+    height: calc(100vh - 70px);
+    top: 70px;
+  }
+  .menu a {
+    font-size: 20px;
+  }
+  .botones i {
+    font-size: 24px;
+  }
+  .banner {
+    height: calc(50vh - 70px);
+  }
+  .copyright {
+    font-size: 14px;
+  }
+}

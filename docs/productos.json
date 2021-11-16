@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "nombre": "Teclado Mecánico STRAFE RGB MK.2 CHERRY MX Silent",
+        "urls": ["../img/001_1.jpg","../img/001_2.jpg"],
+        "precio": 620.00,
+        "categoria": "periféricos",
+        "especificaciones": {
+            "marca":"Corsair",
+            "peso":"1.46 kg",
+            "Encendido":"RGB",
+            "Interruptores":"Cherry MX Silent",
+            "Sondeo USB": "1000Hz",
+            "Puerto USB": "USB 2.0 tipo A",
+            "Matriz": "104 llaves",
+            "Memoria incorporada": "8 MB",
+            "Conectividad": "Cableado",
+            "Reposamanos":"Desmontable con acabado suave"
+        }
+    },
+    {
+        "id": 2,
+        "nombre": "Memoria Ram Corsair Vengeance Lpx 16gb Ddr4 2666mhz",
+        "urls": ["../img/002_1.jpg","../img/002_2.jpg"],
+        "precio": 326.00,
+        "categoria": "accesorios",
+        "especificaciones": {
+            "marca": "Corsair",
+            "Modelo": "Vengeance LPX",
+            "Tipo": "DDR4",
+            "Capacidad": "16 GB (1 x 16)",
+            "Velocidad BUS": "2666 MHz",
+            "Cas latency": "CL16",
+            "Voltaje": "1.2V"
+        }
+    },
+    {
+        "id": 3,
+        "nombre": "Notebook Hp 15-DK0006LA 15.6\" FHD Core I7-9750H 12GB",
+        "urls": ["../img/003_1.jpg","../img/003_2.jpg","../img/003_3.jpg"],
+        "precio": 4655.00,
+        "categoria": "laptops",
+        "especificaciones": {
+            "marca": "HP",
+            "Modelo": "15-DK0006LA",
+            "Pantalla": "15.6\" IPS LED FHD Wide 1920x1080 anti-reflejo",
+            "CPU": "Intel Core i7 9750H 2.60 GHz cache L3 12MB",
+            "Memoria": "12 GB - DDR4 - 2666 MHz",
+            "Almacenamiento": "128 GB - SSD M.2",
+            "Video": "NVIDIA GEFORCE GTX 1650 - 4 GB - GDDR5",
+            "puertos": "1 X USB 3.1 TIPO-C GEN 2 / 1 X USB 3.1 TIPO-A GEN 1 / 2 X USB 3.1 TIPO-A GEN 1",
+            "bateria": "3 celdas tipo LI-ON 52.5 WH",
+            "dimensiones": "25.60 cm x 36.00 cm x 2.34 cm",
+            "peso": "2.28 kg",
+            "sistema operativo": "Windows 10 Home 64 bits"
+        }
+    }
+]

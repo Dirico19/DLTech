@@ -1,0 +1,130 @@
+.cuerpo {
+  background: linear-gradient(30deg, #faa, #eee 20%, #eee 80%, #faa);
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cuerpo h2 {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 30px;
+  color: #c00;
+  border-bottom: 2px solid #c00;
+}
+.principal {
+  width: 730px;
+  margin-right: 5%;
+}
+.lateral {
+  width: 280px;
+}
+
+.car-producto {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #c00;
+}
+.car-producto > div {
+  padding: 0 10px;
+}
+.car-imagen {
+  width: 150px;
+}
+.car-imagen img {
+  width: 100%;
+  height: 125px;
+  object-fit: contain;
+  background: #fff;
+}
+.car-info {
+  width: 335px;
+  transform: translateY(15px);
+}
+.car-nombre {
+  width: 100%;
+  padding-bottom: 20px;
+  text-align: justify;
+}
+.car-precio {
+  width: 100%;
+}
+.car-cantidad {
+  width: 85px;
+  transform: translateY(15px);
+}
+.car-cantidad input {
+  width: 100%;
+  padding: 4px 6px;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 2px #444;
+}
+.car-subtotal {
+  width: 100px;
+  transform: translateY(15px);
+}
+.car-elimina {
+  width: 60px;
+  text-align: center;
+  transform: translateY(15px);
+}
+.borrar {
+  font-size: 18px;
+  color: #c00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.orden {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #c00;
+}
+.orden-des {
+  width: 70%;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.orden-subtotal,
+.orden-descuento,
+.orden-total {
+  width: 30%;
+  padding: 0 10px;
+  text-align: right;
+}
+.comprar {
+  display: block;
+  margin: 30px auto 0;
+  padding: 10px;
+  width: 75%;
+  background: #c00;
+  color: #ddd;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 10px #444;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.comprar:hover {
+  background: #eee;
+  color: #444;
+}
+
+.pro-id {
+  display: none;
+}
