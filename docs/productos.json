@@ -2,7 +2,7 @@
     {
         "id": 1,
         "nombre": "Teclado Mecánico STRAFE RGB MK.2 CHERRY MX Silent",
-        "urls": ["../img/001_1.jpg","../img/001_2.jpg"],
+        "urls": ["./img/001_1.jpg","./img/001_2.jpg"],
         "precio": 620.00,
         "categoria": "periféricos",
         "especificaciones": {
@@ -21,7 +21,7 @@
     {
         "id": 2,
         "nombre": "Memoria Ram Corsair Vengeance Lpx 16gb Ddr4 2666mhz",
-        "urls": ["../img/002_1.jpg","../img/002_2.jpg"],
+        "urls": ["./img/002_1.jpg","./img/002_2.jpg"],
         "precio": 326.00,
         "categoria": "accesorios",
         "especificaciones": {
@@ -37,7 +37,7 @@
     {
         "id": 3,
         "nombre": "Notebook Hp 15-DK0006LA 15.6\" FHD Core I7-9750H 12GB",
-        "urls": ["../img/003_1.jpg","../img/003_2.jpg","../img/003_3.jpg"],
+        "urls": ["./img/003_1.jpg","./img/003_2.jpg","./img/003_3.jpg"],
         "precio": 4655.00,
         "categoria": "laptops",
         "especificaciones": {
