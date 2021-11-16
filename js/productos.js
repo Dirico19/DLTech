@@ -6,7 +6,7 @@ addEventListener("load",()=>{
 })
 const cargarProductos = ()=>{
     const principal = document.querySelector(".cuerpo-principal")
-    fetch("../docs/productos.json")
+    fetch("./docs/productos.json")
     .then(res => res.json())
     .then(data => {
         for (const p of data) {
