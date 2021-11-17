@@ -16,7 +16,8 @@
             "Memoria incorporada": "8 MB",
             "Conectividad": "Cableado",
             "Reposamanos":"Desmontable con acabado suave"
-        }
+        },
+        "destacado": true
     },
     {
         "id": 2,
@@ -32,7 +33,8 @@
             "Velocidad BUS": "2666 MHz",
             "Cas latency": "CL16",
             "Voltaje": "1.2V"
-        }
+        },
+        "destacado": true
     },
     {
         "id": 3,
@@ -53,6 +55,214 @@
             "dimensiones": "25.60 cm x 36.00 cm x 2.34 cm",
             "peso": "2.28 kg",
             "sistema operativo": "Windows 10 Home 64 bits"
-        }
+        },
+        "destacado": true
+    },
+    {
+        "id": 4,
+        "nombre": "Monitor Gigabyte 27\" M27Q 170Hz 2K IPS Freesync",
+        "urls": ["./img/004_1.jpg","./img/004_2.jpg"],
+        "precio": 1783.00,
+        "categoria": "monitores",
+        "especificaciones": {
+            "marca": "Gigabyte",
+            "Modelo": "M27Q",
+            "Pantalla": "27\" IPS Wide 2560x1440",
+            "Tiempo de respuesta": "0.5 ms",
+            "Tasa de refresco": "170 Hz",
+            "Entradas/Salidas": "Displayport / HDMI",
+            "puerto USB": "3 x 2 USB-C"
+        },
+        "destacado": false
+    },
+    {
+        "id": 5,
+        "nombre": "Monitor Lenovo Thinkvision T22I-10 21.5\" Tipo IPS",
+        "urls": ["./img/005_1.jpg","./img/005_2.jpg"],
+        "precio": 838.00,
+        "categoria": "monitores",
+        "especificaciones": {
+            "marca": "Lenovo",
+            "Modelo": "61A9-MAR1-WW",
+            "Pantalla": "21.5\" 16:9",
+            "Tiempo de respuesta": "6 ms",
+            "brillo": "250 nits",
+            "ratio de contraste": "1000:1",
+            "Entradas/Salidas": "DP / HDMI / VGA"
+        },
+        "destacado": false
+    },
+    {
+        "id": 6,
+        "nombre": "Monitor gaming Samsung 49\" QHD 5120x1440 120Hz",
+        "urls": ["./img/006_1.jpg","./img/006_2.jpg"],
+        "precio": 5429.00,
+        "categoria": "monitores",
+        "especificaciones": {
+            "marca": "Samsung",
+            "Pantalla": "49\" curvatura 1800R 32:9",
+            "Tiempo de respuesta": "4 (GTG)",
+            "brillo": "600 cd/m2",
+            "contraste": "3000:1",
+            "refresco": "120 Hz",
+            "auto-voltaje": "100 - 240 VAC"
+        },
+        "destacado": true
+    },
+    {
+        "id": 7,
+        "nombre": "Monitor Asus 24\" VG248QG FULLHD 0.5ms 165Hz",
+        "urls": ["./img/007_1.jpg","./img/007_2.jpg"],
+        "precio": 1083.00,
+        "categoria": "monitores",
+        "especificaciones": {
+            "marca": "Asus",
+            "Pantalla": "24\" 16:9",
+            "brillo": "350 cd/m2",
+            "Tiempo de respuesta": "0.5 ms",
+            "contraste": "1000:1",
+            "refresco": "165 Hz",
+            "Entradas/Salidas":"DP / HDMI / Dual-Link"
+        },
+        "destacado": true
+    },
+    {
+        "id": 8,
+        "nombre": "Memoria Ram Hyperx Fury Ddr4 8gb 2666mhz Cl16 Negro",
+        "urls": ["./img/008_1.jpg","./img/008_2.jpg"],
+        "precio": 213.00,
+        "categoria": "accesorios",
+        "especificaciones": {
+            "marca": "HP",
+            "Modelo": "HyperX Fury",
+            "Capacidad": "8 GB",
+            "tipo": "DDR4",
+            "Voltaje": "1.2V",
+            "frecuencia": "2666 Mhz",
+            "tecnologia": "SDRAM"
+        },
+        "destacado": false
+    },
+    {
+        "id": 9,
+        "nombre": "Memoria Corsair Vengeance LPX rojos, 16GB (2x8GB) 3200Hz",
+        "urls": ["./img/009_1.jpg","./img/009_2.jpg"],
+        "precio": 426.00,
+        "categoria": "accesorios",
+        "especificaciones": {
+            "marca": "Corsair",
+            "Modelo": "Vengeance LPX",
+            "Capacidad": "16 GB (2 x 8 GB)",
+            "tipo": "DDR4",
+            "Voltaje": "1.35V",
+            "frecuencia": "3200 Mhz",
+            "numero de pines": "288",
+            "latencia": "CL 16"
+        },
+        "destacado": true
+    },
+    {
+        "id": 10,
+        "nombre": "Mouse Gamer HP Hyperx Pulsefire Raid, 16000 Dpi Negro",
+        "urls": ["./img/010_1.jpg","./img/010_2.jpg"],
+        "precio": 174.00,
+        "categoria": "periféricos",
+        "especificaciones": {
+            "marca": "HP",
+            "Modelo": "HyperX Pulsefire Raid",
+            "color": "Negro",
+            "velocidad": "450 Pps",
+            "N° botones": "11",
+            "interfaz": "USB",
+            "espacio de trabajo": "800 / 1600 / 2400 / 3200 Dpi"
+        },
+        "destacado": false
+    },
+    {
+        "id": 11,
+        "nombre": "Mouse Óptico Corsair M65 Rgb Elite Fps Gaming 18 000 Dpi",
+        "urls": ["./img/011_1.jpg","./img/011_2.jpg"],
+        "precio": 286.00,
+        "categoria": "periféricos",
+        "especificaciones": {
+            "marca": "Corsair",
+            "Modelo": "M 65 RGB Elite",
+            "color": "Blanco",
+            "long. Cable": "1.8 m",
+            "N° botones": "9",
+            "interfaz": "USB",
+            "espacio de trabajo": "18000 Dpi"
+        },
+        "destacado": true
+    },
+    {
+        "id": 12,
+        "nombre": "Notebook Gigabyte G5 Kc 15.6\" FHD 16GB DDR4, 512GB SSD M.2",
+        "urls": ["./img/012_1.jpg","./img/012_2.jpg"],
+        "precio": 5360.00,
+        "categoria": "laptops",
+        "especificaciones": {
+            "marca": "Gigabyte",
+            "Modelo": "G5 Kc",
+            "Pantalla": "15.6\" FHD Wide Resolución Máxima 1920 X 1080",
+            "CPU": "Intel Core I5 10500h 2.5 MHz Cache L3 12 Mb",
+            "Memoria": "16 GB DDR4",
+            "almacenamiento": "512 GB SSD M.2 PCIE NVME",
+            "video": "Geforce RTX 3060 Max-Q 6 Gb Gddr6",
+            "Conectividad": "LAN 10/100/1000 Mb/S Wireless 802.11a-N Bluetooth 5.0",
+            "sonido": "HD Audio con parlantes stereo",
+            "sistema operativo": "Windows 10 Home 64 bits"
+        },
+        "destacado": true
+    },
+    {
+        "id": 13,
+        "nombre": "Auriculares Inalámbricos Corsair Gamer Void RGB Elite",
+        "urls": ["./img/013_1.jpg","./img/013_2.jpg"],
+        "precio": 465.00,
+        "categoria": "periféricos",
+        "especificaciones": {
+            "marca": "Corsair",
+            "Modelo": "Void RGB Elite Wireless",
+            "color": "Negro carbón",
+            "auriculares": "Frecuencia 20Hz-30kHz, impedancia 32k OHMS-1kHz, sensibilidad 116dB",
+            "micrófono": "Tipo omnidireccional, sensibilidad -42dB, frecuencia 100Hz-10kHz",
+            "interfaz": "Inalámbrica, frecuencia 2.4 ghz, tipo receptor usb wireless",
+            "características": "Controles para volumen y silencio en auricular, iluminación RGB",
+            "bateria": "Interna, recargable",
+            "contenido": "Adaptador USB inalámbrico, cable de carga USB (1.5m)"
+        },
+        "destacado": false
+    },
+    {
+        "id": 14,
+        "nombre": "Mouse Pad Gaming HyperX Fury S Negro/Rojo 45x40cm",
+        "urls": ["./img/014_1.jpg","./img/014_2.jpg"],
+        "precio": 63.00,
+        "categoria": "accesorios",
+        "especificaciones": {
+            "marca": "HP",
+            "Modelo": "HyperX Fury S",
+            "color": "Negro y rojo",
+            "material": "Tela y caucho",
+            "bordes": "Costura uniforme anti-desgaste",
+            "tejido": "Alta densidad"
+        },
+        "destacado": false
+    },
+    {
+        "id": 15,
+        "nombre": "Disco Sólido SSD 240GB Western Digital Green M.2 SATA",
+        "urls": ["./img/015_1.jpg","./img/015_2.jpg"],
+        "precio": 185.00,
+        "categoria": "accesorios",
+        "especificaciones": {
+            "marca": "Western Digital",
+            "Modelo": "WD Green",
+            "Capacidad": "240 GB",
+            "interfaz": "M.2 SATA 6.0 Gb/s",
+            "dimensiones": "0.15 x 2.20 x 8.00 cm"
+        },
+        "destacado": false
     }
 ]

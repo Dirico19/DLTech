@@ -7,9 +7,11 @@
 
 .cuerpo-principal {
   width: 80%;
+  padding: 0 40px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-content: flex-start;
 }
 .cuerpo-principal h2 {
   width: 100%;
@@ -23,6 +25,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin: 25px 40px;
 }
 .pro-imagen {
   width: 100%;
@@ -66,6 +69,9 @@
 .pro-id {
   display: none;
 }
+.pro-cat {
+  display: none;
+}
 
 .cuerpo-lateral {
   width: 20%;
@@ -95,7 +101,11 @@
   padding-bottom: 10px;
   color: #c00;
 }
-button.filtro {
+button.activo {
+  background: #eee;
+  color: #444;
+}
+.filtro {
   width: 40%;
   margin: 10px;
   padding: 10px;
@@ -109,10 +119,6 @@ button.filtro {
   border-radius: 5px;
   transition: background 0.2s, color 0.2s;
   cursor: pointer;
-}
-button.filtro:hover {
-  background: #eee;
-  color: #444;
 }
 
 .precio input {
@@ -264,4 +270,69 @@ button.filtro:hover {
 .especif-añadir:hover {
   background: #eee;
   color: #444;
+}
+
+.opaco2 {
+  position: absolute;
+  background: rgb(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.alerta-añadir {
+  position: fixed;
+  top: calc(50% - 75px);
+  left: calc(50% - 200px);
+  width: 350px;
+  height: 150px;
+  background: linear-gradient(30deg, #faa, #eee 20%, #eee 80%, #faa);
+  z-index: -2000;
+  opacity: 0;
+  padding: 30px;
+  transition: opacity 0.5s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+}
+.mensaje-alerta {
+  width: 100%;
+  color: #444;
+  text-align: center;
+}
+.cerrar-alerta {
+  padding: 8px;
+  width: 80px;
+  background: #ddd;
+  color: #444;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 3px #444;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+.cerrar-alerta:hover {
+  background: #bbb;
+}
+.mostrar3 {
+  opacity: 1;
+  z-index: 3000;
+  transition: opacity 0.5s;
+}
+.mostrar4 {
+  opacity: 1;
+  z-index: 4000;
+  transition: opacity 0.5s;
 }

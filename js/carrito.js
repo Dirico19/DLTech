@@ -76,3 +76,36 @@ const ordenCompra = () => {
     descuento.innerHTML = desc.toFixed(2);
     total.innerHTML = res.toFixed(2);
 }
+
+const bloqueFondo = document.querySelector('.opaco');
+const bloqueAlerta = document.querySelector('.alerta-compra');
+
+document.querySelector('.comprar').addEventListener("click", () => {
+    if (obtenerProductosLS().length == 0){
+        bloqueAlerta.innerHTML = `
+            <div class="mensaje-alerta">No hay productos listados en su carrito de compras.
+                Si desea comprar algo, dirígase a la página de productos. Gracias!</div>
+            <button class="cerrar-alerta">Cerrar</button>
+        `;
+        bloqueFondo.classList.toggle("mostrar1");
+        bloqueAlerta.classList.toggle("mostrar2");
+        document.querySelector('.cerrar-alerta').addEventListener("click",()=>{
+            bloqueFondo.classList.toggle("mostrar1");
+            bloqueAlerta.classList.toggle("mostrar2");
+        });
+    } else{
+        bloqueAlerta.innerHTML = `
+            <div class="mensaje-alerta">Su orden ha sido enviada. Pronto 
+                alguien se pondra en contacto con usted para finalizar la compra. Gracias!</div>
+            <button class="cerrar-alerta">Cerrar</button>
+        `;
+        bloqueFondo.classList.toggle("mostrar1");
+        bloqueAlerta.classList.toggle("mostrar2");
+        document.querySelector('.cerrar-alerta').addEventListener("click",()=>{
+            bloqueFondo.classList.toggle("mostrar1");
+            bloqueAlerta.classList.toggle("mostrar2");
+            localStorage.clear();
+            location.href = "./index.html";
+        })
+    }
+});

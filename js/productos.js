@@ -1,5 +1,7 @@
 const bloqueFondo = document.querySelector('.opaco');
+const bloqueFondo2 = document.querySelector('.opaco2');
 const bloqueEspecif = document.querySelector('.pro-especificaciones');
+const bloqueAlerta = document.querySelector('.alerta-añadir');
 
 addEventListener("load",()=>{
     cargarProductos();
@@ -11,7 +13,7 @@ const cargarProductos = ()=>{
     .then(data => {
         for (const p of data) {
             const article = document.createElement("article");
-            article.className = "producto";
+            article.className = `producto ${p.categoria} ${p.especificaciones.marca}`;
             article.innerHTML = `
                 <img class="pro-imagen" src="${p.urls[0]}">
                 <p class="pro-nombre">${p.nombre}</p>
@@ -22,6 +24,7 @@ const cargarProductos = ()=>{
             principal.appendChild(article);
         }
         cargarEspecificacionesPro(data);
+        cargarFiltrados();
     });
 }
 const cargarBloqueEspecif = ()=>{
@@ -65,7 +68,7 @@ const cargarEspecificacionesPro = (data)=>{
             cargarBloqueEspecif();
             document.querySelector('.pro-cerrar').addEventListener("click",()=> cargarBloqueEspecif());
             document.querySelector('.especif-añadir').addEventListener("click",()=> agregarAlCarrito(id,nombre,imgUrl,precio,categoria,especif));
-        })
+        });
     }
 }
 
@@ -96,10 +99,142 @@ const agregarAlCarrito = (id, nom, imgU, prec, cat, esp) => {
     let productosLS = obtenerProductosLS();
     for (let i = 0; i < productosLS.length; i++) {
         if (productosLS[i].id === producto.id){
-            alert("El producto ya está agregado al carrito");
+            bloqueAlerta.innerHTML = `
+                <div class="mensaje-alerta">El producto ya se encuentra agregado en el carrito.</div>
+                <button class="cerrar-alerta">Cerrar</button>
+            `;
+            bloqueFondo.classList.toggle("mostrar3");
+            bloqueAlerta.classList.toggle("mostrar4");
+            document.querySelector('.cerrar-alerta').addEventListener("click",()=>{
+                bloqueFondo.classList.toggle("mostrar3");
+                bloqueAlerta.classList.toggle("mostrar4");
+            });
             return;
         }
     }
+    bloqueAlerta.innerHTML = `
+        <div class="mensaje-alerta">Producto agregado al carrito con éxito. Puede continuar.</div>
+        <button class="cerrar-alerta">Cerrar</button>
+    `;
+    bloqueFondo.classList.toggle("mostrar3");
+    bloqueAlerta.classList.toggle("mostrar4");
+    document.querySelector('.cerrar-alerta').addEventListener("click",()=>{
+        bloqueFondo.classList.toggle("mostrar3");
+        bloqueAlerta.classList.toggle("mostrar4");
+    });
     guardarProductoLS(producto);
     leerLS();
+}
+
+
+//FILTROS
+
+const cargarFiltrados = () => {
+    const productos = document.querySelectorAll('.producto');
+    const categorias = document.querySelectorAll('.cat');
+    const precioMin = document.querySelector('.precio-min');
+    const precioMax = document.querySelector('.precio-max');
+    const marcas = document.querySelectorAll('.mar');
+    for (let i = 0; i < categorias.length; i++) {
+        categorias[i].addEventListener("click", e => {
+            if (e.target.classList.value.includes("activo"))
+                e.target.classList.remove("activo");
+            else{
+                categorias.forEach(c => c.classList.remove("activo"));
+                e.target.classList.add("activo");
+            }
+            filtroCategoria(productos);
+            const arrayPro = [];
+            productos.forEach(p => {
+                if (p.style.display == "block") arrayPro.push(p);
+            });
+            filtroMarca(arrayPro);
+            arrayPro.splice(0);
+            productos.forEach(p => {
+                if (p.style.display == "block") arrayPro.push(p);
+            });
+            filtroPrecio(arrayPro);
+        });
+    }
+    for (let i = 0; i < marcas.length; i++) {
+        marcas[i].addEventListener("click", e => {
+            if (e.target.classList.value.includes("activo"))
+                e.target.classList.remove("activo");
+            else{
+                marcas.forEach(m => m.classList.remove("activo"));
+                e.target.classList.add("activo");
+            }
+            filtroMarca(productos);
+            const arrayPro = [];
+            productos.forEach(p => {
+                if (p.style.display == "block") arrayPro.push(p);
+            });
+            filtroCategoria(arrayPro);
+            arrayPro.splice(0);
+            productos.forEach(p => {
+                if (p.style.display == "block") arrayPro.push(p);
+            });
+            filtroPrecio(arrayPro);
+        });
+    }
+    precioMin.addEventListener("keyup", () => {
+        filtroPrecio(productos);
+        const arrayPro = [];
+        productos.forEach(p => {
+            if (p.style.display == "block") arrayPro.push(p);
+        });
+        filtroCategoria(arrayPro);
+        arrayPro.splice(0);
+        productos.forEach(p => {
+            if (p.style.display == "block") arrayPro.push(p);
+        });
+        filtroMarca(arrayPro);
+    });
+    precioMax.addEventListener("keyup", () => {
+        filtroPrecio(productos);
+        const arrayPro = [];
+        productos.forEach(p => {
+            if (p.style.display == "block") arrayPro.push(p);
+        });
+        filtroCategoria(arrayPro);
+        arrayPro.splice(0);
+        productos.forEach(p => {
+            if (p.style.display == "block") arrayPro.push(p);
+        });
+        filtroMarca(arrayPro);
+    });
+
+    const filtroCategoria = productos => {
+        let cat = "";
+        categorias.forEach(c => {
+            if (c.classList.value.includes("activo")) cat = c.innerText.toLowerCase();
+        });
+        productos.forEach(p => {
+            if (cat == "") p.style.display = "block";
+            else if (p.classList[1].toLowerCase() == cat) p.style.display = "block";
+            else p.style.display = "none";
+        })
+    }
+    const filtroMarca = productos => {
+        let mar = "";
+        marcas.forEach(m => {
+            if (m.classList.value.includes("activo")) mar = m.innerText.toLowerCase();
+        });
+        productos.forEach(p => {
+            if (mar == "") p.style.display = "block";
+            else if (p.classList[2].toLowerCase() == mar) p.style.display = "block";
+            else p.style.display = "none";
+        })
+    }
+    const filtroPrecio = productos => {
+        let min = parseInt(precioMin.value);
+        let max = parseInt(precioMax.value);
+        if (isNaN(min)) min = 0;
+        if (isNaN(max) || max < min) max = 1000000;
+        productos.forEach(p => {
+            let precio = Number(p.firstElementChild.nextElementSibling.nextElementSibling.innerText.substring(3));
+            if (precio>=min && precio<=max) p.style.display = "block";
+            else p.style.display = "none";
+        });
+    }
 }
