@@ -385,3 +385,57 @@
   background: #ccc;
   color: #444;
 }
+
+.alerta-añadir {
+  position: fixed;
+  top: calc(50% - 75px);
+  left: calc(50% - 200px);
+  width: 350px;
+  height: 150px;
+  background: linear-gradient(30deg, #faa, #eee 20%, #eee 80%, #faa);
+  z-index: -2000;
+  opacity: 0;
+  padding: 30px;
+  transition: opacity 0.5s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+}
+.mensaje-alerta {
+  width: 100%;
+  color: #444;
+  text-align: center;
+}
+.cerrar-alerta {
+  padding: 8px;
+  width: 80px;
+  background: #ddd;
+  color: #444;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 3px #444;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+.cerrar-alerta:hover {
+  background: #bbb;
+}
+.mostrar3 {
+  opacity: 1;
+  z-index: 3000;
+  transition: opacity 0.5s;
+}
+.mostrar4 {
+  opacity: 1;
+  z-index: 4000;
+  transition: opacity 0.5s;
+}

@@ -1,5 +1,6 @@
 const bloqueFondo = document.querySelector('.opaco');
 const bloqueEspecif = document.querySelector('.pro-especificaciones');
+const bloqueAlerta = document.querySelector('.alerta-añadir');
 
 addEventListener("load",()=>{
     cargarProductosInicio();
@@ -171,10 +172,29 @@ const agregarAlCarrito = (id, nom, imgU, prec, cat, esp) => {
     let productosLS = obtenerProductosLS();
     for (let i = 0; i < productosLS.length; i++) {
         if (productosLS[i].id === producto.id){
-            alert("El producto ya está agregado al carrito");
+            bloqueAlerta.innerHTML = `
+                <div class="mensaje-alerta">El producto ya se encuentra agregado en el carrito.</div>
+                <button class="cerrar-alerta">Cerrar</button>
+            `;
+            bloqueFondo.classList.toggle("mostrar3");
+            bloqueAlerta.classList.toggle("mostrar4");
+            document.querySelector('.cerrar-alerta').addEventListener("click",()=>{
+                bloqueFondo.classList.toggle("mostrar3");
+                bloqueAlerta.classList.toggle("mostrar4");
+            });
             return;
         }
     }
+    bloqueAlerta.innerHTML = `
+        <div class="mensaje-alerta">Producto agregado al carrito con éxito. Puede continuar.</div>
+        <button class="cerrar-alerta">Cerrar</button>
+    `;
+    bloqueFondo.classList.toggle("mostrar3");
+    bloqueAlerta.classList.toggle("mostrar4");
+    document.querySelector('.cerrar-alerta').addEventListener("click",()=>{
+        bloqueFondo.classList.toggle("mostrar3");
+        bloqueAlerta.classList.toggle("mostrar4");
+    });
     guardarProductoLS(producto);
     leerLS();
 }

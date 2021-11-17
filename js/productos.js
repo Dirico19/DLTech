@@ -1,5 +1,4 @@
 const bloqueFondo = document.querySelector('.opaco');
-const bloqueFondo2 = document.querySelector('.opaco2');
 const bloqueEspecif = document.querySelector('.pro-especificaciones');
 const bloqueAlerta = document.querySelector('.alerta-añadir');
 
