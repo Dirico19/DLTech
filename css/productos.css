@@ -197,7 +197,7 @@ button.activo {
   height: 400px;
   box-shadow: 0 0 2px #444;
   object-fit: contain;
-  background: #eee;
+  background: #fff;
 }
 .especif-info {
   width: 400px;
